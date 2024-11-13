@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdania</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="topnav">
+        <a  href="index.html">menu</a>
+        <a  class="active" href="kalkulator1.html">kalkulator podatkowy brutto-netto</a>
+        <a href="kalkulator2.html">kalkulator prowizyjny dla sprzedawców</a>
+        <a href="katalog.html">katalog produktów </a>
+        <a href="CDPR.html">Riot games</a>
+        <a href="karuzela.html">Karuzela</a>
+        <a href="animacja.html"> Animacja</a>
+        <a href="vaporeon.html"> Vaporeon clicker</a>
+      </div>
+      <div id="wrapper">
+        <h3>Kalkulator netto/brutto</h3>
+     
+        <div class="input-wrapper">
+           <input type="text" id="value" />
+           <div class="error" id="value-error"></div>
+        </div>
+        <div class="input-wrapper">
+           <select id="dir">
+              <option value="">Wybierz działanie</option>
+              <option value="netto-brutto">Z netto na brutto</option>
+              <option value="brutto-netto">Z brutto na netto</option>
+           </select>
+        </div>
+        <div class="input-wrapper">
+           to <span id="result">-</span>
+        </div>
+     </div>
+     <script src="javascript.js"></script> 
+</body>
+</html>

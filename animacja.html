@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania</title>
+    <link rel="stylesheet" href="Style/style7.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">menu</a>
+        <a href="kalkulator1.html">kalkulator podatkowy brutto-netto</a>
+        <a href="kalkulator2.html">kalkulator prowizyjny dla sprzedawców</a>
+        <a href="katalog.html">katalog produktów </a>
+        <a href="CDPR.html">Riot games</a>
+        <a href="karuzela.html">Karuzela</a>
+        <a class="active" href="animacja.html"> Animacja</a>
+        <a href="vaporeon.html"> Vaporeon clicker</a>
+      </div>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+
+        camera.position.z = 5;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+
+
+        document.body.addEventListener('click', function() {
+            cube.material.color.set(Math.random() * 0xffffff);
+        });
+
+        animate();
+
+        window.addEventListener('resize', function() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
+      
+    
+</body>
+</html>

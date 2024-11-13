@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania</title>
+    <link rel="stylesheet" href="Style/style8.css">
+</head>
+<body>
+    <div class="topnav">
+        <a  href="index.html">menu</a>
+        <a  href="kalkulator1.html">kalkulator podatkowy brutto-netto</a>
+        <a  href="kalkulator2.html">kalkulator prowizyjny dla sprzedawców</a>
+        <a  href="katalog.html">katalog produktów </a>
+        <a href="CDPR.html">Riot games</a>
+        <a href="karuzela.html">Karuzela</a>
+        <a href="animacja.html"> Animacja</a>
+        <a class="active" href="vaporeon.html"> Vaporeon clicker</a>
+      </div>
+    <h1>Kliknij, aby dodać Vapoyrona!</h1>
+    <div id="vapoyron-container"></div>
+
+    <script>
+        const container = document.getElementById('vapoyron-container');
+
+        document.body.addEventListener('click', function() {
+            const img = document.createElement('img');
+            img.src = 'vaporeon.jpg';
+            img.alt = 'Vapoyron';
+            container.appendChild(img);
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

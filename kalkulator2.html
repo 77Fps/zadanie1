@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania</title>
+    <link rel="stylesheet" href="style/style2.css">
+</head>
+<body>
+    <div class="topnav">
+        <a  href="index.html">menu</a>
+        <a  href="kalkulator1.html">kalkulator podatkowy brutto-netto</a>
+        <a  class="active" href="kalkulator2.html">kalkulator prowizyjny dla sprzedawców</a>
+        <a href="katalog.html">katalog produktów </a>
+        <a href="CDPR.html">Riot games</a>
+        <a href="karuzela.html">Karuzela</a>
+        <a href="animacja.html"> Animacja</a>
+        <a href="vaporeon.html"> Vaporeon clicker</a>
+      </div>
+          <div class="container">
+              <h1>Kalkulator Prowizyjny dla Sprzedawców</h1>
+              
+              <label for="salesValue">Wartość Sprzedaży (PLN):</label>
+              <input type="number" id="salesValue" placeholder="Wprowadź wartość sprzedaży">
+              
+              <label for="margin">Marża (%):</label>
+              <input type="number" id="margin" placeholder="Wprowadź marżę" value="10">
+              
+              <button onclick="obliczprowizje()">Oblicz Prowizję i Kasa dla Sprzedawcy</button>
+              
+              <h2 id="Wysokość Prowizji"></h2>
+              <h2 id="Wysokość Gotówki"></h2>
+          </div>
+      
+          <script src="script.js"></script>
+      </body>
+      </html>
+</body>
+</html>
